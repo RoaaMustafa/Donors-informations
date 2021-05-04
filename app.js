@@ -13,22 +13,24 @@ function Donor(donorName,donorAge,amount){
   this.amount=amount;
   Donor.all.push(this);
 }
+
 // create header for the table
 function headerTable(){
-  let headerArr=['Donor Name','Donor Age','Amount'];
   let headerRow=document.createElement('tr');
-  let headData='';
-  for(let i=0; i<headerArr.length;i++){
-    headData.document.createElement('th');
-    headerRow.appendChild(headData);
-    headData.textContent=headerArr[i];
+  headerRow.appendChild(table);
+  let headerArr=['Donor Name','Donor Age','Amount'];
+  for(let i=0;i<headerArr.length;i++){
+    let headEl=document.createElement('th');
+    headerRow.appendChild(headEl);
+    headEl.textContent=`${headerArr[i]}`;
+    console.log(headerArr[i]);
   }
 }
 headerTable();
 // create render function using prototype
 Donor.prototype.render=function(){
   let rowEl=document.createElement('tr');
-  table.appendChild('tr');
+  table.appendChild(rowEl);
   let nameEl=document.createElement('td');
   rowEl.appendChild(nameEl);
   nameEl.textContent=this.donorName;
@@ -38,7 +40,7 @@ Donor.prototype.render=function(){
   let amountEl=document.createElement('td');
   rowEl.appendChild(amountEl);
   amountEl.textContent=this.amount;
-  totalEl.innerHTML=`Total = ${calcTotal()}`;
+  totalEl.textContent=`Total = ${calcTotal()}`;
   saveToLs();
 };
 Donor.prototype.generateAge=function(){
@@ -61,7 +63,6 @@ function showToTable(event){
   let amount=event.target.amount.value;
   let appendToTable = new Donor(donorName,donorAge,amount);
   appendToTable.generateAge();
-  saveToLs();
   appendToTable.render();
 }
 function saveToLs(){
@@ -71,9 +72,9 @@ function saveToLs(){
 function getFromLs(){
   let oldData=localStorage.getItem('donorsInfo');
   let order=JSON.parse(oldData);
-  if(order !== 'Null'){
+  if(order !== null){
     for(let i=0;i<order.length;i++){
-      let reInstatiation= new Donor(order.all[i].donorName,order.all[i].donorAge,order.all[i].amount);
+      let reInstatiation= new Donor(order[i].donorName,order[i].donorAge,order[i].amount);
       reInstatiation.render();
     }
   }

@@ -1,19 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
 *{
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 header{
-
+    background-color: rgba(96, 96, 96,.8);
+    text-align: center;
+    height: 70px;
 }
+header h1{
+    color:#eee ;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 20px;
+    font-size: xx-large;
+}
+
 body{
     background-image: url(/donate-background.jpg);
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
 main{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 50px;
     min-height: 700px;
+    padding-top: 3%;
+}
+#forForm{
+    background-color: rgba(96, 96, 96,.8);
+    border-radius: 3px;
+    color:#eee ;
+    max-height:160px ;
+    margin:30px;
+}
+#forForm fieldset{
+margin-left: 50px;
+margin-top: 30px;
+}
+#name{
+ margin-left: 100px; 
+ width: 320px;  
+}
+#amount{
+ margin-left: 133px;
+ width:320px;   
+}
+#submit{
+    margin-left: 192px;
+    width:320px;    
+    color:#eee ;
+    background-color:black ;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+#forTable{
+    background-color: rgba(96, 96, 96,.8);
+    border-radius: 3px;
+    color:#eee ;
+    margin:30px;
+    min-height: 40px;
+}
+#forTable table{
+  margin:30px;
+  color:#eee ; 
 }
 footer{
+    background-color: rgba(96, 96, 96,.8);
     text-align: center;
     height: 40px;
+}
+footer p {
+    color:#eee ;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+#forTable th{
+padding-left: 10px;
+padding-right: 10px;
+border: 1px double #eee;
+}
+table tr{
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    border: 1px double #eee;  
+}
+table td{
+    border: 1px double #eee;  
+}
+#forTable h2{
+    padding-top: 40px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
 }

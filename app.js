@@ -1,9 +1,10 @@
+/* eslint-disable indent */
 'use strict';
-let tableContainer=document.getElementById('forTable');
+let container=document.getElementById('forTable');
 let table=document.createElement('table');
-tableContainer.appendChild(table);
+container.appendChild(table);
 let totalEl=document.createElement('h2');
-tableContainer.appendChild(totalEl);
+container.appendChild(totalEl);
 Donor.all=[];
 let total=0;
 // create constuctor function
@@ -16,14 +17,13 @@ function Donor(donorName,donorAge,amount){
 
 // create header for the table
 function headerTable(){
+let headerArr=['Donor Name','Donor Age','Amount'];
   let headerRow=document.createElement('tr');
-  headerRow.appendChild(table);
-  let headerArr=['Donor Name','Donor Age','Amount'];
+  table.appendChild(headerRow);
   for(let i=0;i<headerArr.length;i++){
     let headEl=document.createElement('th');
     headerRow.appendChild(headEl);
     headEl.textContent=`${headerArr[i]}`;
-    console.log(headerArr[i]);
   }
 }
 headerTable();

@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+header{
+
+}
+body{
+    background-image: url(/donate-background.jpg);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    min-height: 700px;
+}
+footer{
+    text-align: center;
+    height: 40px;
+}

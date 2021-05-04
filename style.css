@@ -79,17 +79,19 @@ footer p {
     padding-top: 20px;
 }
 #forTable th{
-padding-left: 10px;
-padding-right: 10px;
-border: 1px double #eee;
+padding-left: 40px;
+padding-right: 40px;
+   border: 3px double #eee; 
 }
 table tr{
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    border: 1px double #eee;  
+    padding-left: 30px;
+padding-right: 30px;
+    border: 3px double #eee;  
 }
 table td{
-    border: 1px double #eee;  
+    padding-left: 40px;
+padding-right: 40px;
+    border: 3px double #eee; 
 }
 #forTable h2{
     padding-top: 40px;
